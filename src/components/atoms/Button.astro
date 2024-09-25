@@ -6,7 +6,7 @@ const { link, isLoggedIn, primary, text, adicionalClass } = Astro.props;
 {
   isLoggedIn === true ? (
       <a
-        class="text-center font-poppins text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2 bg-accent border-2 border-accent rounded-full"
+        class="text-center font-poppins text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-1 bg-accent border-2 border-accent rounded-full"
         href={`${link}`}
       >
         Dashboard
@@ -14,7 +14,7 @@ const { link, isLoggedIn, primary, text, adicionalClass } = Astro.props;
       </a>
   ) : primary === true ? (
       <a
-        class={`text-center font-poppins text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium px-4 py-2 bg-background border-2 border-accent rounded-full ${adicionalClass}`} 
+        class={`text-center font-poppins text-baseM md:text-base hover:bg-accentBackground hover:border-lightAccent text-accent font-medium px-4 py-2 bg-background border border-accent rounded-full ${adicionalClass}`} 
         href={`${link}`}
       >
         
@@ -22,7 +22,7 @@ const { link, isLoggedIn, primary, text, adicionalClass } = Astro.props;
       </a>
       ) : 
       <a
-        class={` text-center font-poppins text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2  bg-accent border-2 border-accent rounded-full ${adicionalClass}`} 
+        class={` text-center font-poppins text-baseM md:text-base hover:bg-lightAccent hover:border-lightAccent text-white font-medium px-4 py-2  bg-accent border border-accent rounded-full ${adicionalClass}`} 
         href={`${link}`}
       >
         {text ? text: "??"}
