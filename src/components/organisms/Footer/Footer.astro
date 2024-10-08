@@ -19,15 +19,15 @@ const links = [
 ];
 ---
 
-<footer class="flex md:items-center justify-between py-5 px-4 md:px-8 lg:px-20 relative bg-white before:content-[''] before:w-2/3 before:rounded-full before:left-1/2 before:transform before:-translate-x-1/2 before:top-0 before:h-[3px] before:absolute before:bg-accentBackground">
+<footer class="flex h-full md:items-center justify-between py-5 px-4 md:px-8 lg:px-20 relative bg-white before:content-[''] before:w-2/3 before:rounded-full before:left-1/2 before:transform before:-translate-x-1/2 before:top-0 before:h-[3px] before:absolute before:bg-accentBackground">
   <a href="#" cursor-pointer>
     <img src="/Logo.svg" alt="Logo de Stimate" class="size-10" />
   </a>
-  <ul class="text-center md:flex md:gap-10">
+  <ul class="text-center flex flex-col md:flex-row md:gap-10 ">
     {
       links.map((link, index) => (
-        <li id={`link-${index}`} class="font-comfortaa">
-          <a href={`${link.href}`}>{link.title}</a>
+        <li id={`link-${index}`} class="mb-5 md:mb-0">
+          <a class="font-comfortaa" href={`${link.href}`}>{link.title}</a>
         </li>
       ))
     }
