@@ -1,5 +1,8 @@
 ---
 import Button from "../../atoms/Button.astro"
+
+const data = import.meta.env.DEV
+const appEndpoint = import.meta.env.APP_ENDPOINT
 ---
 <meta charset="UTF-8" />
 
@@ -16,10 +19,12 @@ import Button from "../../atoms/Button.astro"
     </div>
     <div class="flex gap-8 w-full lg:w-[44rem] items-center justify-end">
         <Button
+        link={appEndpoint + "/iniciar-sesion"}
         primary = {true}
         text = "Iniciar sesión"
         />
         <Button
+        link= {appEndpoint + "/crear-cuenta"}
         text = "¡Regístrate ahora!"
         adicionalClass = "hidden xl:block "
         />
@@ -40,8 +45,8 @@ import Button from "../../atoms/Button.astro"
                 <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#" >Inicio</a></li>
                 <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#benefits" >Beneficios</a></li>
                 <li class="w-full rounded-xl text-lg hover:text-lightAccent hover:bg-accentBackground"><a href="#pricing">Planes</a></li>
-                <li><Button primary = {true} text = "Iniciar sesión" link="##"/></li>
-                <li><Button text = "¡Regístrate ahora!" link="##"/></li>
+                <li><Button primary = {true} text = "Iniciar sesión" link="https://app.stimate.co/iniciar-sesion"/></li>
+                <li><Button text = "¡Regístrate ahora!" link="https://app.stimate.co/crear-cuenta"/></li>
             </ul>
         </nav>
     </div>
